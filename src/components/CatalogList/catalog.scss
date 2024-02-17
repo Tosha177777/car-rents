@@ -1,0 +1,125 @@
+.catalog-section {
+}
+
+.ctlgList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 29px;
+  row-gap: 24px;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    row-gap: 50px;
+  }
+}
+
+.ctlgEl {
+  display: flex;
+  flex-direction: column;
+  width: 274px;
+  height: 426px;
+}
+
+.imgBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  overflow: hidden;
+
+  width: 274px;
+  height: 268px;
+}
+
+.carImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.titleBox {
+  width: 264px;
+  margin-top: 14px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.carName {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+
+  width: 200px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+span {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.make {
+  color: #121417;
+}
+
+.model {
+  color: #3470ff;
+}
+
+.carAddress {
+  text-align: left;
+  width: 100%;
+  margin-top: 8px;
+  height: 41px;
+
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
+}
+
+.addressPart {
+  color: rgba(18, 20, 23, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0%;
+
+  padding-right: 6px;
+}
+
+.addressPart:not(:first-child) {
+  padding-left: 6px;
+}
+
+.addressPart:not(:last-child) {
+  border-right: 1px solid rgba(18, 20, 23, 0.1);
+}
+
+.learnMore {
+  border-radius: 12px;
+  background-color: #3470ff;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 99px 12px 99px;
+
+  border: 0;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #ffffff;
+  margin-top: auto;
+  transition: background-color 0.3s ease;
+}
+
+.learnMore:hover {
+  background-color: #0b44cd;
+}

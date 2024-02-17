@@ -1,0 +1,60 @@
+@import url("/src/components/Header/headerClass.scss");
+@import url("/src/components/CatalogList/catalog.scss");
+@import url("/src/components/Modal/modal.scss");
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 280px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    max-width: 704px;
+    padding: 0 32px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1184px;
+    padding: 0 24px;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
