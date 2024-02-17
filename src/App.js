@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { Header } from './components/Header/Header';
-import RestrictedRoute from './components/RestrictedRoute/RestrictedRoute';
+// import RestrictedRoute from './components/RestrictedRoute/RestrictedRoute';
 import { Route, Routes } from 'react-router-dom';
 import CatalogPage from 'Catalog/CatalogPage';
 
