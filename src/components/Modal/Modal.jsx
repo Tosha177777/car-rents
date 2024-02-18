@@ -83,7 +83,7 @@ const Modal = ({ data, onClose }) => {
           Rental car
         </a>
         <button className="crossBtn">
-          <Cross onClick={handleClick} />
+          <Cross className="cross" onClick={handleClick} />
         </button>
       </div>
     </div>
