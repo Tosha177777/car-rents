@@ -1,6 +1,3 @@
-.catalog-section {
-}
-
 .ctlgList {
   display: flex;
   flex-wrap: wrap;
@@ -8,8 +5,11 @@
   row-gap: 24px;
   justify-content: center;
 
+  margin-bottom: 32px;
+
   @media screen and (min-width: 768px) {
     row-gap: 50px;
+    margin-bottom: 100px;
   }
 }
 
@@ -21,6 +21,7 @@
 }
 
 .imgBox {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,6 +36,26 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.heartBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+
+  stroke: #ffffff;
+  fill: none;
+  transition: transform 2s ease;
+}
+
+.heartBtn.active {
+  fill: #3470ff;
+  stroke: #3470ff;
+  transform-origin: center;
 }
 
 .titleBox {

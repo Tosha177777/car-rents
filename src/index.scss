@@ -1,10 +1,11 @@
-@import url("/src/components/Header/headerClass.scss");
-@import url("/src/components/CatalogList/catalog.scss");
-@import url("/src/components/Modal/modal.scss");
+@import url('/src/components/Header/headerClass.scss');
+@import url('/src/components/CatalogList/catalog.scss');
+@import url('/src/components/Modal/modal.scss');
+@import url('/src/pages/Catalog/catalogPage.scss');
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Manrope", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Manrope', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,7 +28,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
@@ -51,10 +52,16 @@ img {
 }
 
 ul {
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 button {
   cursor: pointer;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
 }

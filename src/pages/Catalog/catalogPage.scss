@@ -1,0 +1,79 @@
+.formList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    gap: 18px;
+    margin-bottom: 50px;
+  }
+}
+
+.relativeBox {
+  position: relative;
+}
+
+.selector {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  padding: 14px 18px;
+  border: none;
+  border-radius: 14px;
+  background-color: #f7f7fb;
+}
+
+.arrow {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.selector:focus + .arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.option {
+  border-radius: 14px;
+  background-color: #f7f7fb;
+}
+
+.withForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loadMore {
+  width: 79px;
+
+  border: none;
+  background-color: inherit;
+
+  color: #3470ff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-decoration-line: underline;
+  transition: color 1s ease;
+}
+
+.loadMore:hover {
+  color: #0b44cd;
+}
+
+.filterBtn {
+  padding: 12px 30px;
+
+  @media screen and (min-width: 768px) {
+    padding: 14px 44px;
+  }
+}
