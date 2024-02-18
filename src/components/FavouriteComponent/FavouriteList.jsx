@@ -1,17 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch, useSelector } from 'react-redux';
 
-import './catalog.scss';
 import Modal from '../Modal/Modal';
 import SpanMap from 'funcs/spanFunc';
 import { ReactComponent as Heart } from 'icons/heart.svg';
+import { ReactComponent as Cart } from 'icons/cart.svg';
 import { toggleFavourite } from '../../redux/favouriteReducer';
 import { selectFavArr } from '../../redux/favouriteSelector';
+import './favouriteList.scss';
 
-const CatalogList = ({ filteredCars }) => {
+const FavouriteList = () => {
   const dispatch = useDispatch();
   const favourites = useSelector(selectFavArr);
+
+  useEffect(() => {}, [favourites]);
 
   const [isOpened, setIsOpened] = useState(false);
   const [data, setData] = useState('');
@@ -27,14 +30,14 @@ const CatalogList = ({ filteredCars }) => {
 
   return (
     <>
-      <ul className="ctlgList">
-        {filteredCars &&
-          filteredCars.map(data => {
+      {favourites !== null && favourites.length > 0 ? (
+        <ul className="ctlgList">
+          {favourites.map(data => {
             const addressParts = data.address
               .split(', ')
               .filter(part => !part.includes('Example'));
             return (
-              <li key={uuidv4()} className="ctlgEl">
+              <li className="ctlgEl" key={uuidv4()}>
                 <div className="imgBox">
                   <img
                     src={data.img}
@@ -76,10 +79,17 @@ const CatalogList = ({ filteredCars }) => {
               </li>
             );
           })}
-      </ul>
+        </ul>
+      ) : (
+        <div className="emptyBox">
+          <h2 className="emptyFav">
+            You haven't chosen your favorite car yet <Cart className="cart" />
+          </h2>
+        </div>
+      )}
       {isOpened && <Modal data={data} onClose={() => onToggleModal(null)} />}
     </>
   );
 };
 
-export default CatalogList;
+export default FavouriteList;

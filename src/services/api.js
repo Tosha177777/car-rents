@@ -1,12 +1,12 @@
-import axios from "axios";
+import axios from 'axios';
 
-const instance = axios.create({
-  baseURL: "https://65ce2c89c715428e8b4020f3.mockapi.io/",
+export const instance = axios.create({
+  baseURL: 'https://65ce2c89c715428e8b4020f3.mockapi.io/',
 });
 
 const fetchCars = async (page, limit) => {
   try {
-    const response = await instance.get("adverts", {
+    const response = await instance.get('adverts', {
       params: {
         page: page,
         limit: limit,
@@ -14,9 +14,14 @@ const fetchCars = async (page, limit) => {
     });
     return response.data;
   } catch (error) {
-    console.error("Error fetching cars:", error);
+    console.error('Error fetching cars:', error);
     throw error;
   }
 };
 
-export default fetchCars;
+const getAllCars = async () => {
+  const { data } = await instance.get('adverts');
+  return data;
+};
+
+export { getAllCars, fetchCars };

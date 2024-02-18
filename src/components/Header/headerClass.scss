@@ -1,6 +1,26 @@
-.header-cls {
+.headerCls {
+  margin-bottom: 24px;
+}
+
+.headerCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   height: 80px;
-  p {
-    font-weight: 700;
-  }
+  align-items: center;
+}
+
+.logo {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.svg {
+  stroke: black;
 }

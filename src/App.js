@@ -1,17 +1,25 @@
-import { Suspense } from 'react';
-import { Header } from './components/Header/Header';
-// import RestrictedRoute from './components/RestrictedRoute/RestrictedRoute';
+import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import CatalogPage from 'Catalog/CatalogPage';
+import { Loader } from 'rsuite';
+
+import { Header } from './components/Header/Header';
+
+const FavoritePage = lazy(() => import('pages/Favorite/FavoritePage'));
+const CatalogPage = lazy(() => import('pages/Catalog/CatalogPage'));
+const HomePage = lazy(() => import('pages/HomePage/HomePage'));
 
 const appRoutes = [
   {
     path: '/',
-    element: (
-      // <RestrictedRoute>
-      <CatalogPage />
-      // </RestrictedRoute>
-    ),
+    element: <HomePage />,
+  },
+  {
+    path: '/catalog',
+    element: <CatalogPage />,
+  },
+  {
+    path: '/favorite',
+    element: <FavoritePage />,
   },
 ];
 
@@ -20,7 +28,7 @@ function App() {
     <>
       <Header />
       <main>
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense fallback={<Loader />}>
           <Routes>
             {appRoutes.map(({ path, element }) => (
               <Route key={path} path={path} element={element} />

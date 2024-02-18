@@ -1,0 +1,44 @@
+.heading {
+  font-size: 40px;
+  margin-bottom: 12px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 60px;
+  }
+}
+
+.listHome {
+  text-align: right;
+}
+
+.homePar {
+  width: -75%;
+  font-size: 20px;
+}
+
+.plusWidth {
+  width: 65%;
+}
+
+.textBox {
+  padding: 20px;
+  @media screen and (min-width: 768px) {
+    padding: 40px;
+  }
+}
+
+.textBox:nth-child(odd) {
+  background-color: rgba(52, 112, 255, 0.2);
+  text-align: left;
+}
+
+.textBox:nth-child(even) {
+  text-align: right;
+}
+
+.contactBtn {
+  margin-top: 14px;
+  justify-content: center;
+  max-width: 168px;
+  display: flex;
+}
