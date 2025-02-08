@@ -3,6 +3,22 @@
 @import url('/src/components/Modal/modal.scss');
 @import url('/src/pages/Catalog/catalogPage.scss');
 
+::-webkit-scrollbar {
+  background-color: transparent;
+
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3470ff;
+  border-radius: 5px;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Manrope', sans-serif;
